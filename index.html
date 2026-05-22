@@ -1913,6 +1913,19 @@ if(window.self!==window.top){
   function _sendH(){window.parent.postMessage({type:'efHeight',height:document.documentElement.scrollHeight},'*');}
   _sendH();
   new ResizeObserver(_sendH).observe(document.documentElement);
+
+  // Anchor nav: iframe is full-height so internal scroll is a no-op.
+  // Post the target offset to the parent Webflow page instead.
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href').slice(1);
+      var el=document.getElementById(id);
+      if(!el)return;
+      e.preventDefault();
+      var offset=el.getBoundingClientRect().top+window.pageYOffset;
+      window.parent.postMessage({type:'talScrollTo',offset:offset},'*');
+    });
+  });
 }
 </script>
 

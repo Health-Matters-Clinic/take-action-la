@@ -988,6 +988,181 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 
 
+<!-- GIVEAWAY ENTRY -->
+<section id="giveaway" style="padding:80px 0;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(35,61,255,.06) 0%,transparent 70%)">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto">
+      <div class="micro" style="text-align:center">Unstoppable Season Giveaway</div>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(38px,6vw,72px);line-height:.88;text-transform:uppercase;text-align:center;margin:0 0 16px;letter-spacing:-.01em">Enter to Win the <span style="color:var(--blue)">MacBook Neo</span></h2>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,.6);text-align:center;margin:0 0 48px">Complete this form to submit your giveaway entry. One entry per person. Drawing held after May 27 — winner announced May 30.</p>
+
+      <form id="giveaway-form" style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:48px;display:flex;flex-direction:column;gap:24px">
+        <!-- Full Name -->
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label for="gw-name" style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)">Full Name <span style="color:var(--blue)">*</span></label>
+          <input id="gw-name" type="text" required placeholder="Your full name" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 18px;font-size:16px;color:#fff;outline:none;font-family:'Barlow',sans-serif;transition:border-color .2s" onfocus="this.style.borderColor='rgba(35,61,255,.6)'" onblur="this.style.borderColor='rgba(255,255,255,.12)'">
+        </div>
+
+        <!-- Email Address -->
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label for="gw-email" style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)">Email Address <span style="color:var(--blue)">*</span></label>
+          <input id="gw-email" type="email" required placeholder="your@email.com" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 18px;font-size:16px;color:#fff;outline:none;font-family:'Barlow',sans-serif;transition:border-color .2s" onfocus="this.style.borderColor='rgba(35,61,255,.6)'" onblur="this.style.borderColor='rgba(255,255,255,.12)'">
+        </div>
+
+        <!-- Events Attended -->
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px">Which events did you attend?</legend>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <label style="display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="checkbox" id="gw-ev-move" name="events" value="MOVE: May 9 Walk/Run" style="width:18px;height:18px;accent-color:#233dff;cursor:pointer;flex-shrink:0">
+                MOVE: May 9 Walk/Run
+              </label>
+              <label style="display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="checkbox" id="gw-ev-heal" name="events" value="HEAL: May 20 Wellness Meetup" style="width:18px;height:18px;accent-color:#233dff;cursor:pointer;flex-shrink:0">
+                HEAL: May 20 Wellness Meetup
+              </label>
+              <label style="display:flex;align-items:center;gap:12px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="checkbox" id="gw-ev-transform" name="events" value="TRANSFORM: May 27 Virtual Experience" style="width:18px;height:18px;accent-color:#233dff;cursor:pointer;flex-shrink:0">
+                TRANSFORM: May 27 Virtual Experience
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- CalMHSA Survey -->
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <fieldset style="border:none;padding:0;margin:0">
+            <legend style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px">Did you complete the CalMHSA post-event survey?</legend>
+            <div style="display:flex;gap:24px;flex-wrap:wrap">
+              <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="radio" name="calmhsa" value="Yes" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Yes
+              </label>
+              <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="radio" name="calmhsa" value="No" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> No
+              </label>
+              <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
+                <input type="radio" name="calmhsa" value="Not yet" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Not yet
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Star Rating -->
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)">Rate your overall Unstoppable Season experience</span>
+          <div id="gw-stars" style="display:flex;gap:8px;align-items:center" role="group" aria-label="Star rating 1 to 5">
+            <button type="button" class="gw-star" data-val="1" aria-label="1 star" style="background:none;border:none;cursor:pointer;padding:4px;font-size:32px;color:rgba(255,255,255,.2);transition:color .15s;line-height:1">&#9733;</button>
+            <button type="button" class="gw-star" data-val="2" aria-label="2 stars" style="background:none;border:none;cursor:pointer;padding:4px;font-size:32px;color:rgba(255,255,255,.2);transition:color .15s;line-height:1">&#9733;</button>
+            <button type="button" class="gw-star" data-val="3" aria-label="3 stars" style="background:none;border:none;cursor:pointer;padding:4px;font-size:32px;color:rgba(255,255,255,.2);transition:color .15s;line-height:1">&#9733;</button>
+            <button type="button" class="gw-star" data-val="4" aria-label="4 stars" style="background:none;border:none;cursor:pointer;padding:4px;font-size:32px;color:rgba(255,255,255,.2);transition:color .15s;line-height:1">&#9733;</button>
+            <button type="button" class="gw-star" data-val="5" aria-label="5 stars" style="background:none;border:none;cursor:pointer;padding:4px;font-size:32px;color:rgba(255,255,255,.2);transition:color .15s;line-height:1">&#9733;</button>
+            <span id="gw-star-label" style="font-size:13px;color:rgba(255,255,255,.35);margin-left:4px"></span>
+          </div>
+          <input type="hidden" id="gw-rating" value="">
+        </div>
+
+        <!-- Comment -->
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label for="gw-comment" style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)">Leave a comment <span style="color:rgba(255,255,255,.25);font-weight:400;letter-spacing:0;text-transform:none;font-size:12px">(optional)</span></label>
+          <textarea id="gw-comment" placeholder="Tell us about your experience..." rows="4" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:14px 18px;font-size:15px;color:#fff;outline:none;font-family:'Barlow',sans-serif;resize:vertical;transition:border-color .2s;line-height:1.6" onfocus="this.style.borderColor='rgba(35,61,255,.6)'" onblur="this.style.borderColor='rgba(255,255,255,.12)'"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:8px">
+          <button type="submit" id="gw-submit" class="btn-primary" style="background:var(--blue);width:100%;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;font-size:15px;padding:18px 36px">
+            <span id="gw-submit-text">Submit My Entry</span>
+          </button>
+          <div id="gw-msg" style="display:none;text-align:center;font-size:15px;font-weight:600;padding:16px 20px;border-radius:10px"></div>
+          <p style="font-size:13px;color:rgba(255,255,255,.3);text-align:center;line-height:1.55">One entry per person. No purchase necessary. Open to Unstoppable Season attendees. Winner announced May 30, 2026.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var GAS_URL = 'https://script.google.com/macros/s/AKfycbxPpn0Q8jiyZ5ftR1uLcb3BJwPI-C2zyEdm1xJT-7iX3dDIYIV5kZwR_nrsl2PC7ExSvg/exec';
+  var starLabels = ['', 'Not great', 'Could be better', 'Pretty good', 'Really good', 'Outstanding'];
+  var selectedRating = 0;
+  var stars = document.querySelectorAll('.gw-star');
+  var ratingInput = document.getElementById('gw-rating');
+  var starLabel = document.getElementById('gw-star-label');
+
+  function setStars(val) {
+    selectedRating = val;
+    ratingInput.value = val;
+    starLabel.textContent = val ? starLabels[val] : '';
+    stars.forEach(function(s) {
+      s.style.color = parseInt(s.dataset.val) <= val ? '#f5c518' : 'rgba(255,255,255,.2)';
+    });
+  }
+
+  stars.forEach(function(s) {
+    s.addEventListener('click', function() { setStars(parseInt(this.dataset.val)); });
+    s.addEventListener('mouseenter', function() {
+      var hv = parseInt(this.dataset.val);
+      stars.forEach(function(st) {
+        st.style.color = parseInt(st.dataset.val) <= hv ? '#f5c518' : 'rgba(255,255,255,.2)';
+      });
+    });
+    s.addEventListener('mouseleave', function() { setStars(selectedRating); });
+  });
+
+  document.getElementById('giveaway-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('gw-name').value.trim();
+    var email = document.getElementById('gw-email').value.trim();
+    if (!name || !email) return;
+
+    var checkedBoxes = Array.from(document.querySelectorAll('input[name="events"]:checked')).map(function(cb){ return cb.value; });
+    var calmhsa = (document.querySelector('input[name="calmhsa"]:checked') || {}).value || '';
+    var rating = ratingInput.value;
+    var comment = document.getElementById('gw-comment').value.trim();
+
+    var btn = document.getElementById('gw-submit');
+    var txt = document.getElementById('gw-submit-text');
+    var msg = document.getElementById('gw-msg');
+
+    btn.disabled = true;
+    txt.textContent = 'Submitting...';
+
+    var payload = {
+      action: 'submit_giveaway_entry',
+      name: name,
+      email: email,
+      eventsAttended: checkedBoxes.join(', '),
+      calMHSASurveyCompleted: calmhsa,
+      starRating: rating,
+      comment: comment
+    };
+
+    fetch(GAS_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(payload)
+    }).then(function() {
+      msg.style.display = 'block';
+      msg.style.background = 'rgba(35,61,255,.15)';
+      msg.style.border = '1px solid rgba(35,61,255,.3)';
+      msg.style.color = '#8aabff';
+      msg.textContent = 'You are entered. Winner announced May 30.';
+      btn.style.display = 'none';
+      if(window.gtag) gtag('event','giveaway_entry',{method:'form'});
+    }).catch(function() {
+      msg.style.display = 'block';
+      msg.style.background = 'rgba(255,60,60,.1)';
+      msg.style.border = '1px solid rgba(255,60,60,.2)';
+      msg.style.color = '#ff8a8a';
+      msg.textContent = 'Something went wrong. Please try again or email events@healthmatters.clinic.';
+      btn.disabled = false;
+      txt.textContent = 'Submit My Entry';
+    });
+  });
+})();
+</script>
+
 <!-- TRAILER -->
 <section class="trailer" id="trailer">
   <div class="container">

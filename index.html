@@ -1036,14 +1036,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             <legend style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:12px">Did you complete the CalMHSA post-event survey?</legend>
             <div style="display:flex;gap:24px;flex-wrap:wrap">
               <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
-                <input type="radio" name="calmhsa" value="Yes" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Yes
+                <input type="radio" name="calmhsa" value="Yes" onchange="document.getElementById('calmhsa-prompt').style.display='none'" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Yes
               </label>
               <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
-                <input type="radio" name="calmhsa" value="No" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> No
+                <input type="radio" name="calmhsa" value="No" onchange="document.getElementById('calmhsa-prompt').style.display='block'" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> No
               </label>
               <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:15px;color:rgba(255,255,255,.75)">
-                <input type="radio" name="calmhsa" value="Not yet" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Not yet
+                <input type="radio" name="calmhsa" value="Not yet" onchange="document.getElementById('calmhsa-prompt').style.display='block'" style="width:17px;height:17px;accent-color:#233dff;cursor:pointer;flex-shrink:0"> Not yet
               </label>
+            </div>
+            <div id="calmhsa-prompt" style="display:none;margin-top:14px;background:rgba(35,61,255,.12);border:1px solid rgba(35,61,255,.3);border-radius:12px;padding:14px 16px;">
+              <p style="margin:0 0 10px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.55;">Please complete the CalMHSA post-event survey before submitting your entry. It takes about 2 minutes and is required for giveaway eligibility.</p>
+              <a href="https://calmhsa.my.site.com/SAMHSAdatacollection/apex/b3f__formcomplete?id=a1kJw000008HL1qIAG&LA-PEI-TA-26=KLT" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#233dff;color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:100px;text-decoration:none;">Complete the Survey</a>
             </div>
           </fieldset>
         </div>

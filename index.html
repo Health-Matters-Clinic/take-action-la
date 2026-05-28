@@ -931,58 +931,58 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <main id="main-content" tabindex="-1">
 <!-- HERO -->
-<section class="hero" style="background:#000;height:auto;max-height:none;min-height:0;">
-  <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;">
-    <iframe src="https://www.youtube.com/embed/8qOY77LoLxg?autoplay=1&controls=1&playsinline=1&rel=0" title="TRANSFORM: The Unstoppable Experience — Live Stream" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"></iframe>
+<section class="hero">
+  <div class="hero-photo" role="img" aria-label="Unstoppable Season 2026 — Keep Going">
+    <div class="hero-overlay"></div>
   </div>
-  <div style="background:#080808;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-    <div>
-      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:#fff;text-transform:uppercase;letter-spacing:.02em;">TRANSFORM: The Unstoppable Experience</div>
-      <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:4px;">Live now · Health Matters Clinic x Take Action LA · Mental Health Awareness Month 2026</div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div style="width:8px;height:8px;border-radius:50%;background:#ff6e40;animation:pulse 2s ease-in-out infinite;flex-shrink:0"></div>
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7)">The Season Is Not Over</span>
     </div>
-    <a href="https://www.youtube.com/live/8qOY77LoLxg" target="_blank" rel="noopener" style="background:#ff0000;color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:10px 22px;border-radius:100px;text-decoration:none;white-space:nowrap;">Watch on YouTube</a>
+    <h1 class="hero-title">Keep<br><span class="tb">Going.</span></h1>
+    <p class="hero-sub">You showed up. You moved. You healed. You transformed. Now keep the momentum. The next walk is June 13 in Inglewood.</p>
+    <div class="hero-actions">
+      <a href="#giveaway" class="btn-primary">Enter the MacBook Giveaway</a>
+      <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener" class="btn-ghost"><div class="ghost-ring"><svg width="10" height="12" viewBox="0 0 10 12" fill="currentColor" aria-hidden="true"><path d="M0 0l10 6-10 6V0z"/></svg></div>Register for June 13</a>
+    </div>
   </div>
 </section>
 
 <!-- COUNTDOWN BAR -->
 <div class="tbar">
-  <span class="tbar-text">TRANSFORM · The Unstoppable Experience <span id="tbar-status"></span></span>
+  <span class="tbar-text">NEXT WALK/RUN · June 13 · 123 W Manchester Blvd, Inglewood <span id="tbar-status"></span></span>
   <div class="cdown" id="tbar-cdown" style="display:none">
+    <div class="cdu"><span class="cdn" id="cd-d">--</span><span class="cdl">Days</span></div>
+    <span class="cds">:</span>
     <div class="cdu"><span class="cdn" id="cd-h">--</span><span class="cdl">Hrs</span></div>
     <span class="cds">:</span>
     <div class="cdu"><span class="cdn" id="cd-m">--</span><span class="cdl">Min</span></div>
-    <span class="cds">:</span>
-    <div class="cdu"><span class="cdn" id="cd-s">--</span><span class="cdl">Sec</span></div>
   </div>
-  <a href="https://www.youtube.com/live/8qOY77LoLxg" class="tbar-cta" id="tbar-btn" target="_blank" rel="noopener">Watch Live</a>
+  <a href="https://eventfinder.healthmatters.clinic" class="tbar-cta" target="_blank" rel="noopener">Register Free</a>
 </div>
 <script>
 (function(){
-  var target = new Date('2026-05-27T19:00:00-07:00').getTime();
+  var target = new Date('2026-06-13T08:00:00-07:00').getTime();
   function tick(){
     var now = Date.now(), diff = target - now;
     var statusEl = document.getElementById('tbar-status');
     var cdownEl = document.getElementById('tbar-cdown');
-    var btnEl = document.getElementById('tbar-btn');
     if(diff <= 0){
-      statusEl.textContent = 'Live Now';
-      statusEl.style.cssText = 'color:#ff2020;font-weight:800;';
+      statusEl.textContent = '';
       cdownEl.style.display = 'none';
-      if(btnEl){ btnEl.textContent = 'Watch Live'; }
     } else {
-      var h = Math.floor(diff/3600000);
+      var d = Math.floor(diff/86400000);
+      var h = Math.floor((diff%86400000)/3600000);
       var m = Math.floor((diff%3600000)/60000);
-      var s = Math.floor((diff%60000)/1000);
-      statusEl.textContent = 'Tonight 7 PM PT';
-      statusEl.style.cssText = 'color:rgba(255,255,255,.65);font-weight:600;';
       cdownEl.style.display = '';
+      document.getElementById('cd-d').textContent = String(d);
       document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
       document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-      document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
     }
   }
   tick();
-  setInterval(tick, 1000);
+  setInterval(tick, 60000);
 })();
 </script>
 

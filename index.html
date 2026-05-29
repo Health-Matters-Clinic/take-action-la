@@ -666,13 +666,28 @@ section{position:relative}
 .bb-wh{background:var(--white);color:var(--black);border-color:var(--black)}.bb-wh::before{background:var(--black)}
 
 /* ── FOOTER ── */
-footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.f-logo{font-family:var(--body-font);font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
-.f-logo span{color:var(--blue)}
-.f-mid{font-family:var(--body-font);font-size:13px;color:rgba(255,255,255,.45);letter-spacing:.02em;text-align:center;line-height:1.7}
-.f-right{font-family:var(--body-font);font-size:13px;font-weight:600;color:rgba(255,255,255,.5)}
-.f-right a{color:var(--blue);transition:color .2s}
-.f-right a:hover{color:var(--white)}
+footer{background:#0a0a0a;color:var(--white);padding:72px 48px 0;font-family:var(--body-font)}
+.f-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.08);max-width:1200px;margin:0 auto}
+.f-brand-link{display:flex;align-items:center;gap:12px;text-decoration:none;margin-bottom:16px}
+.f-brand-link img{width:40px;height:40px;border-radius:10px;background:#fff}
+.f-brand-name{font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;color:var(--white)}
+.f-desc{font-family:var(--body-font);font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin:0 0 24px;max-width:280px}
+.f-donate{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:var(--white);border:1.5px solid #0f0f0f;border-radius:100px;padding:12px 24px;font-family:var(--body-font);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:opacity .2s}
+.f-donate:hover{opacity:.88}
+.f-donate-dot{width:6px;height:6px;border-radius:50%;background:#fff;display:inline-block;flex-shrink:0}
+.f-col-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3);margin:0 0 20px}
+.f-nav{display:flex;flex-direction:column;gap:12px}
+.f-nav a{font-family:var(--body-font);font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s}
+.f-nav a:hover{color:var(--white)}
+.f-bottom{display:flex;align-items:center;justify-content:space-between;padding:24px 0;max-width:1200px;margin:0 auto;flex-wrap:wrap;gap:12px}
+.f-legal{font-family:var(--body-font);font-size:11px;color:rgba(255,255,255,.25);margin:0}
+.f-legal a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+.f-legal a:hover{color:var(--white)}
+.f-site{font-family:var(--body-font);font-size:11px;color:rgba(255,255,255,.25);margin:0}
+.f-access{max-width:1200px;margin:0 auto;padding:20px 0 0;font-family:var(--body-font);font-size:13px;color:rgba(255,255,255,.4);line-height:1.7}
+.f-access strong{color:rgba(255,255,255,.6);font-weight:700}
+.f-access a{color:var(--blue);font-weight:600;text-decoration:underline;text-underline-offset:3px;transition:color .2s}
+.f-access a:hover{color:var(--white)}
 
 /* ── ANIMATIONS ── */
 /* ── ACCESSIBILITY ── */
@@ -711,7 +726,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .fc-slide[data-state="center"]{width:72%}
   .fc-slide[data-state="left"]{width:42%;transform:translateX(-74%) scale(.84);opacity:.25}
   .fc-slide[data-state="right"]{width:42%;transform:translateX(74%) scale(.84);opacity:.25}
-  footer{flex-direction:column;text-align:center;padding:28px 20px}
+  footer{padding:56px 20px 0}
+  .f-grid{grid-template-columns:1fr;gap:36px}
+  .f-bottom{flex-direction:column;align-items:flex-start}
   .tbar{padding:12px 20px}
   .shop-header{flex-direction:column;align-items:flex-start;gap:20px}
   .merch-grid{grid-template-columns:repeat(2,1fr);gap:12px}
@@ -1894,15 +1911,60 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <!-- FOOTER -->
 <footer>
-  <div class="f-logo">Health <span>Matters</span> Clinic</div>
-  <div class="f-mid">
-    EIN 85-3784250 · Los Angeles, CA<br>
-    <a href="https://www.healthmatters.clinic/takeactionla" style="color:var(--blue)">healthmatters.clinic/takeactionla</a> · © 2026 Health Matters Clinic<br>
-    <span style="color:rgba(255,255,255,.55);font-size:13px;font-weight:600">ADA Accommodations Available</span><br>
-    <span style="color:rgba(255,255,255,.45);font-size:13px">Need accessibility support? Contact Kayla before the event:</span><br>
-    <a href="mailto:Kayla@healthmatters.clinic" style="color:var(--blue);font-size:13px;font-weight:600;text-decoration:underline;text-underline-offset:3px">Kayla@healthmatters.clinic</a>
+  <div class="f-grid">
+    <div class="f-brand">
+      <a href="https://www.healthmatters.clinic" class="f-brand-link">
+        <img src="https://cdn.prod.website-files.com/67359e6040140078962e8a54/6912e29e5710650a4f45f53f_Untitled%20(256%20x%20256%20px).png" alt="Health Matters Clinic logo" width="40" height="40">
+        <span class="f-brand-name">Health Matters Clinic</span>
+      </a>
+      <p class="f-desc">A Los Angeles-based 501(c)(3) nonprofit advancing health equity through community wellness events, mental health education, primary care screenings, and digital wellness tools across LA County.</p>
+      <a href="https://www.healthmatters.clinic/donate" class="f-donate">
+        <span class="f-donate-dot"></span>Support Our Mission
+      </a>
+    </div>
+    <div>
+      <p class="f-col-title">Community</p>
+      <nav class="f-nav" aria-label="Community links">
+        <a href="https://eventfinder.healthmatters.clinic">Event Finder</a>
+        <a href="https://www.healthmatters.clinic/resources/resourcedirectory">Resource Directory</a>
+        <a href="https://calmkit.healthmatters.clinic">CalmKit</a>
+        <a href="https://volunteer.healthmatters.clinic">Volunteer Portal</a>
+        <a href="https://partner.healthmatters.clinic">Partner Portal</a>
+      </nav>
+    </div>
+    <div>
+      <p class="f-col-title">Programs</p>
+      <nav class="f-nav" aria-label="Programs links">
+        <a href="https://volunteer.healthmatters.clinic/unstoppable">Unstoppable</a>
+        <a href="https://www.healthmatters.clinic/takeactionla">Take Action LA</a>
+        <a href="https://www.healthmatters.clinic/initiatives">Initiatives</a>
+        <a href="https://www.healthmatters.clinic/about">About</a>
+      </nav>
+    </div>
+    <div>
+      <p class="f-col-title">Contact</p>
+      <nav class="f-nav" aria-label="Contact links">
+        <a href="mailto:contact@healthmatters.clinic">General</a>
+        <a href="mailto:partner@healthmatters.clinic">Partnerships</a>
+        <a href="mailto:unstoppable@healthmatters.clinic">Unstoppable</a>
+        <a href="https://www.instagram.com/healthmatters.clinic" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.youtube.com/@healthmatters.clinic" target="_blank" rel="noopener noreferrer">YouTube</a>
+      </nav>
+    </div>
   </div>
-  <div class="f-right"><a href="mailto:unstoppable@healthmatters.clinic" aria-label="Email the Unstoppable team">Email Us</a></div>
+  <div class="f-access">
+    <strong>ADA Accommodations Available.</strong> Need accessibility support? Contact Kayla before the event: <a href="mailto:Kayla@healthmatters.clinic">Kayla@healthmatters.clinic</a>
+  </div>
+  <div class="f-bottom">
+    <p class="f-legal">
+      &copy; 2026 Health Matters Clinic. All rights reserved. 501(c)(3) Nonprofit.
+      &nbsp;&nbsp;
+      <a href="https://www.healthmatters.clinic/privacy">Privacy</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.healthmatters.clinic/terms">Terms</a>
+    </p>
+    <p class="f-site">healthmatters.clinic</p>
+  </div>
 </footer>
 
 <script>

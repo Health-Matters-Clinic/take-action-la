@@ -2124,6 +2124,32 @@ if(window.self!==window.top){
 
 <!--
 ════════════════════════════════════════════════════════
+  WEBFLOW SCROLL LISTENER
+  Paste this <script> block into the /takeactionla page
+  in Webflow under Page Settings > Before </body> tag.
+  This enables nav anchor links to scroll the parent page.
+════════════════════════════════════════════════════════
+
+<script>
+window.addEventListener('message', function(e) {
+  if (!e.data) return;
+  // Resize iframe to full content height
+  if (e.data.type === 'efHeight' || e.data.type === 'talHeight') {
+    var iframes = document.querySelectorAll('iframe');
+    iframes.forEach(function(f) { f.style.height = e.data.height + 'px'; });
+  }
+  // Scroll parent page to the anchor target inside the iframe
+  if (e.data.type === 'talScrollTo') {
+    var iframe = document.querySelector('iframe');
+    if (!iframe) return;
+    var iframeTop = iframe.getBoundingClientRect().top + window.pageYOffset;
+    var navH = 80; // Webflow nav height offset
+    window.scrollTo({ top: iframeTop + e.data.offset - navH, behavior: 'smooth' });
+  }
+});
+</script>
+
+════════════════════════════════════════════════════════
   WEBFLOW POPUP EMBED
   Paste this <script> block into a Webflow Embed element
   on your homepage, /events, and /resources/eventfinder

@@ -1102,7 +1102,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   </div>
 </section>
 <script>
+var _lastSubmit = {};
+function _canSubmit(key) {
+  var now = Date.now();
+  if (_lastSubmit[key] && (now - _lastSubmit[key]) < 30000) return false;
+  _lastSubmit[key] = now;
+  return true;
+}
+</script>
+<script>
 (function(){
+  /* TODO: rotate GAS deployment URL before next campaign — current URL committed to public repo */
   var GAS_URL = 'https://script.google.com/macros/s/AKfycbxPpn0Q8jiyZ5ftR1uLcb3BJwPI-C2zyEdm1xJT-7iX3dDIYIV5kZwR_nrsl2PC7ExSvg/exec';
   var starLabels = ['', 'Not great', 'Could be better', 'Pretty good', 'Really good', 'Outstanding'];
   var selectedRating = 0;
@@ -1132,6 +1142,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
   document.getElementById('giveaway-form').addEventListener('submit', function(e) {
     e.preventDefault();
+    if (!_canSubmit('giveaway')) {
+      var msg = document.getElementById('gw-msg');
+      msg.style.display = 'block';
+      msg.style.background = 'rgba(255,110,40,.1)';
+      msg.style.border = '1px solid rgba(255,110,40,.25)';
+      msg.style.color = '#ff8a8a';
+      msg.textContent = 'Please wait 30 seconds before submitting again.';
+      return;
+    }
     var name = document.getElementById('gw-name').value.trim();
     var email = document.getElementById('gw-email').value.trim();
     if (!name || !email) return;

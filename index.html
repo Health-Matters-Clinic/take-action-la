@@ -976,7 +976,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     <span class="cds">:</span>
     <div class="cdu"><span class="cdn" id="cd-m">--</span><span class="cdl">Min</span></div>
   </div>
-  <a href="https://eventfinder.healthmatters.clinic" class="tbar-cta" target="_blank" rel="noopener">Register Free</a>
+  <a href="https://eventfinder.healthmatters.clinic" class="tbar-cta" target="_blank" rel="noopener noreferrer">Register Free</a>
 </div>
 <script>
 (function(){
@@ -986,8 +986,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
     var statusEl = document.getElementById('tbar-status');
     var cdownEl = document.getElementById('tbar-cdown');
     if(diff <= 0){
-      statusEl.textContent = '';
-      cdownEl.style.display = 'none';
+      if(statusEl) statusEl.textContent = '';
+      if(cdownEl) cdownEl.style.display = 'none';
     } else {
       var d = Math.floor(diff/86400000);
       var h = Math.floor((diff%86400000)/3600000);
@@ -1190,7 +1190,7 @@ function _canSubmit(key) {
   <div class="container">
     <div class="sec-hdr reveal">
       <div><div class="micro">Three Events · One Movement</div><div class="sec-title">Pick Your<br>Event</div></div>
-      <a href="https://eventfinder.healthmatters.clinic" class="sec-link" target="_blank" rel="noopener" aria-label="All Events, opens in a new tab">All Events →</a>
+      <a href="https://eventfinder.healthmatters.clinic" class="sec-link" target="_blank" rel="noopener noreferrer" aria-label="All Events, opens in a new tab">All Events →</a>
     </div>
     <p class="ev-identity reveal">One event left this May. Real community. No experience required. Show up exactly as you are.</p>
     <div class="ev-stack">
@@ -1244,7 +1244,7 @@ function _canSubmit(key) {
         <p class="tsec-body">RSVP for any Unstoppable Season event by May 2, pick your size, and we will hand you a limited-edition Unstoppable tee at check-in. Free. Ours. While supplies last.</p>
         <div class="dl-chip"><span>Deadline: May 2, 2026 · Limited Sizes · In-Person Events Only</span></div>
         <p class="tsec-body" style="font-size:15px">Attending virtually on May 27? Virtual attendees receive a <strong>coupon code for a free tee</strong>, redeemable in the online shop.</p>
-        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;margin-top:4px;background:var(--orange)">Register &amp; Select Your Size</a>
+        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block;margin-top:4px;background:var(--orange)">Register &amp; Select Your Size</a>
         <div class="prize-terms-accordion" style="margin-top:16px">
           <button class="prize-terms-toggle" onclick="var b=this.nextElementSibling,o=b.style.maxHeight;b.style.maxHeight=o?null:'600px';this.querySelector('.toggle-arr').textContent=o?'↓':'↑';this.setAttribute('aria-expanded',o?'false':'true')" aria-expanded="false">
             <span>T-Shirt Pickup Policy</span><span class="toggle-arr">↓</span>
@@ -1315,13 +1315,12 @@ function _canSubmit(key) {
           <div class="prize-chip">Winner announced May 30</div>
           <div class="prize-chip">Must attend to be eligible</div>
         </div>
-        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener" class="btn-primary" style="margin-top:4px;display:inline-flex;align-items:center;gap:10px;background:var(--blue)">Register for Free</a>
+        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:4px;display:inline-flex;align-items:center;gap:10px;background:var(--blue)">Register for Free</a>
         <div class="prize-terms-accordion" id="terms">
           <button class="prize-terms-toggle" onclick="var b=this.nextElementSibling,o=b.style.maxHeight;b.style.maxHeight=o?null:'2000px';this.querySelector('.toggle-arr').textContent=o?'↓':'↑';this.setAttribute('aria-expanded',o?'false':'true')" aria-expanded="false">
             <span>Official Terms &amp; Conditions</span><span class="toggle-arr">↓</span>
           </button>
           <div class="prize-terms-body">
-            <p><strong>NO PURCHASE NECESSARY.</strong> Open to residents of Los Angeles County, age 18 or older. Void where prohibited by law.</p>
             <p><strong>NO PURCHASE NECESSARY.</strong> Open to residents of Los Angeles County, age 18 or older. Void where prohibited by law.</p>
             <p><strong>How to Enter:</strong> Earn one (1) entry for each Unstoppable Experience event you attend, check into using your registration QR code, and at which you complete the official post-event survey. Maximum of three (3) entries per person (MOVE, May 9; HEAL, May 20; TRANSFORM, May 27, 2026). Registration is required before the event. Walk-ins are eligible for prize entries if they register and check in at the event.</p>
             <p><strong>Eligibility:</strong> Must be present at each in-person event. For the virtual TRANSFORM event, must attend the live session, check in via the link provided, and complete the post-event survey during or immediately after.</p>
@@ -1356,7 +1355,7 @@ function _canSubmit(key) {
         <p class="about-body">Unstoppable Season is brought to you through the <strong>Los Angeles County Department of Mental Health's Take Action LA campaign</strong>, in partnership with Health Matters Clinic, bringing accessible, stigma-free mental wellness programming directly into our communities.</p>
       </div>
       <div class="reveal rd2" style="display:flex;flex-direction:column;gap:20px;justify-content:center">
-        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener" class="btn-primary" style="background:var(--orange);display:inline-flex;align-items:center;gap:10px;width:fit-content">Register for Free</a>
+        <a href="https://eventfinder.healthmatters.clinic" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background:var(--orange);display:inline-flex;align-items:center;gap:10px;width:fit-content">Register for Free</a>
         <a href="#donate" class="btn-primary" style="background:transparent;border:1.5px solid rgba(255,255,255,.65);display:inline-flex;align-items:center;gap:10px;width:fit-content">Support Our Work</a>
       </div>
     </div>
@@ -1439,7 +1438,7 @@ function _canSubmit(key) {
           <div class="shop-photo-eyebrow">Wear the Movement</div>
           <h2 class="shop-photo-title">Shop the<br><span style="color:var(--orange)">Unstoppable</span><br>Drop</h2>
           <p class="shop-photo-sub">Limited-edition merch from Health Matters Clinic. Tees, hoodies, hats, totes. Every purchase keeps a community health program free.</p>
-          <a href="https://www.healthmatters.clinic/shop" class="shop-photo-btn" target="_blank" rel="noopener" aria-label="View Full Unstoppable Merch Store, opens in a new tab">View Full Store</a>
+          <a href="https://www.healthmatters.clinic/shop" class="shop-photo-btn" target="_blank" rel="noopener noreferrer" aria-label="View Full Unstoppable Merch Store, opens in a new tab">View Full Store</a>
         </div>
       </div>
     </div>
@@ -1607,7 +1606,7 @@ function _canSubmit(key) {
     <div style="margin-top:48px;padding:36px 0;border-top:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px" class="reveal rd2">
       <div>
         <div style="font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.2);margin-bottom:12px">Powered By</div>
-        <a href="https://www.takeactionla.com/" target="_blank" rel="noopener" aria-label="Take Action LA, LA County DMH campaign website, opens in a new tab" style="display:flex;align-items:center;gap:16px;text-decoration:none">
+        <a href="https://www.takeactionla.com/" target="_blank" rel="noopener noreferrer" aria-label="Take Action LA, LA County DMH campaign website, opens in a new tab" style="display:flex;align-items:center;gap:16px;text-decoration:none">
           <img src="assets/takeaction-logo.png" style="height:80px;opacity:.9" alt="Take Action LA logo" loading="lazy">
           <span style="font-family:var(--body-font);font-size:13px;color:rgba(255,255,255,.35)">LA County Department of Mental Health · Take Action Campaign</span>
         </a>
@@ -1636,7 +1635,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">What is Take Action LA?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a">Take Action LA is an LA County Department of Mental Health (LACDMH) initiative for Mental Health Awareness Month in May 2026. Health Matters Clinic is proud to serve as the community partner bringing three free events to life across the month, all powered by our Unstoppable program. For more information, visit <a href="https://takeactionla.com" target="_blank">takeactionla.com</a>.</div>
+          <div class="faq-a">Take Action LA is an LA County Department of Mental Health (LACDMH) initiative for Mental Health Awareness Month in May 2026. Health Matters Clinic is proud to serve as the community partner bringing three free events to life across the month, all powered by our Unstoppable program. For more information, visit <a href="https://takeactionla.com" target="_blank" rel="noopener noreferrer">takeactionla.com</a>.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">How do I register?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
@@ -1652,7 +1651,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">Who hosts these events?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a"><a href="https://healthmatters.clinic" target="_blank">Health Matters Clinic (HMC)</a> is a Los Angeles-based nonprofit delivering free healthcare, mental health programming, and wellness resources to underserved communities across LA County. Take Action LA is produced in partnership with the LA County Department of Mental Health.</div>
+          <div class="faq-a"><a href="https://healthmatters.clinic" target="_blank" rel="noopener noreferrer">Health Matters Clinic (HMC)</a> is a Los Angeles-based nonprofit delivering free healthcare, mental health programming, and wellness resources to underserved communities across LA County. Take Action LA is produced in partnership with the LA County Department of Mental Health.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">Are the events really free?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
@@ -1748,7 +1747,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">When is TRANSFORM and how do I join?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a"><strong>Date:</strong> Wednesday, May 27, 2026<br><strong>Time:</strong> 7:00 PM – 8:00 PM PDT<br><strong>Format:</strong> Live on Zoom, the link is sent upon registration.<br><br>Register at <a href="https://healthmatters.clinic/takeactionla" target="_blank">healthmatters.clinic/takeactionla</a>.</div>
+          <div class="faq-a"><strong>Date:</strong> Wednesday, May 27, 2026<br><strong>Time:</strong> 7:00 PM – 8:00 PM PDT<br><strong>Format:</strong> Live on Zoom, the link is sent upon registration.<br><br>Register at <a href="https://healthmatters.clinic/takeactionla" target="_blank" rel="noopener noreferrer">healthmatters.clinic/takeactionla</a>.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">What device can I use to join?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
@@ -1792,7 +1791,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">How can I get involved beyond attending?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a">There are two ways to plug in:<br><br><strong>Unstoppable Ambassador</strong>, Spread the word using your personal referral link, tracked through our volunteer portal. The ambassador who gets the most confirmed attendees wins up to a $500 Visa e-gift card.<br><br><strong>Core Volunteer</strong>, 10 spots available for hands-on event support (3–6 hrs/week for 8 weeks leading up to the events). Apply at <a href="https://volunteer.healthmatters.clinic" target="_blank">volunteer.healthmatters.clinic</a>.</div>
+          <div class="faq-a">There are two ways to plug in:<br><br><strong>Unstoppable Ambassador</strong>, Spread the word using your personal referral link, tracked through our volunteer portal. The ambassador who gets the most confirmed attendees wins up to a $500 Visa e-gift card.<br><br><strong>Core Volunteer</strong>, 10 spots available for hands-on event support (3–6 hrs/week for 8 weeks leading up to the events). Apply at <a href="https://volunteer.healthmatters.clinic" target="_blank" rel="noopener noreferrer">volunteer.healthmatters.clinic</a>.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">What does a Core Volunteer do?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
@@ -1800,7 +1799,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">How do I become an Unstoppable Ambassador?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a">Create a free account at <a href="https://volunteer.healthmatters.clinic" target="_blank">volunteer.healthmatters.clinic</a>, then go to Referral Hub to grab your personal ambassador link for each event. Share it on social, in group chats, and in person, every registration through your link is tracked to you.</div>
+          <div class="faq-a">Create a free account at <a href="https://volunteer.healthmatters.clinic" target="_blank" rel="noopener noreferrer">volunteer.healthmatters.clinic</a>, then go to Referral Hub to grab your personal ambassador link for each event. Share it on social, in group chats, and in person, every registration through your link is tracked to you.</div>
         </div>
       </div>
 
@@ -1832,7 +1831,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">How can my organization become a sponsor or partner?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a">We have several partnership tiers available, from Lead Community Partner to Community Supporter. Submit our partner form at <a href="https://healthmatters.clinic/takeactionla" target="_blank">healthmatters.clinic/takeactionla</a> or email <a href="mailto:partner@healthmatters.clinic">partner@healthmatters.clinic</a> to get started.</div>
+          <div class="faq-a">We have several partnership tiers available, from Lead Community Partner to Community Supporter. Submit our partner form at <a href="https://healthmatters.clinic/takeactionla" target="_blank" rel="noopener noreferrer">healthmatters.clinic/takeactionla</a> or email <a href="mailto:partner@healthmatters.clinic">partner@healthmatters.clinic</a> to get started.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">Will events be photographed or recorded?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
@@ -1840,7 +1839,7 @@ function _canSubmit(key) {
         </div>
         <div class="faq-item">
           <button class="faq-q"><span class="faq-q-text">How do I contact the HMC team?</span><svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4"/></svg></button>
-          <div class="faq-a">For Take Action LA questions, email <a href="mailto:unstoppable@healthmatters.clinic">unstoppable@healthmatters.clinic</a> or visit <a href="https://healthmatters.clinic" target="_blank">healthmatters.clinic</a>. For volunteer-specific questions, reach us at <a href="mailto:volunteers@healthmatters.clinic">volunteers@healthmatters.clinic</a>.</div>
+          <div class="faq-a">For Take Action LA questions, email <a href="mailto:unstoppable@healthmatters.clinic">unstoppable@healthmatters.clinic</a> or visit <a href="https://healthmatters.clinic" target="_blank" rel="noopener noreferrer">healthmatters.clinic</a>. For volunteer-specific questions, reach us at <a href="mailto:volunteers@healthmatters.clinic">volunteers@healthmatters.clinic</a>.</div>
         </div>
       </div>
 
@@ -1856,9 +1855,9 @@ function _canSubmit(key) {
       <div class="fcta-eye">This is not just awareness. This is action.</div>
       <h2 class="fcta-title">Show Up.<br><span class="tb">Be Heard.</span><br><span class="to">Become</span><br>Unstoppable.</h2>
       <div class="fcta-acts">
-        <a href="https://eventfinder.healthmatters.clinic" class="btn-big bb-bl" target="_blank" rel="noopener" aria-label="Find My Experience, opens in a new tab">Find My Experience</a>
-        <a href="https://www.healthmatters.clinic/shop" class="btn-big bb-wh" target="_blank" rel="noopener" aria-label="Shop the Drop, opens in a new tab">Shop the Drop</a>
-        <a href="https://www.healthmatters.clinic/donate" class="btn-big bb-or" target="_blank" rel="noopener" aria-label="Donate to Health Matters Clinic, opens in a new tab">Donate</a>
+        <a href="https://eventfinder.healthmatters.clinic" class="btn-big bb-bl" target="_blank" rel="noopener noreferrer" aria-label="Find My Experience, opens in a new tab">Find My Experience</a>
+        <a href="https://www.healthmatters.clinic/shop" class="btn-big bb-wh" target="_blank" rel="noopener noreferrer" aria-label="Shop the Drop, opens in a new tab">Shop the Drop</a>
+        <a href="https://www.healthmatters.clinic/donate" class="btn-big bb-or" target="_blank" rel="noopener noreferrer" aria-label="Donate to Health Matters Clinic, opens in a new tab">Donate</a>
       </div>
     </div>
   </div>
@@ -2195,7 +2194,7 @@ window.addEventListener('message', function(e) {
 <!-- STICKY MOBILE REGISTER BAR -->
 <div class="sticky-reg" aria-label="Register for free, sticky bar">
   <span class="sticky-reg-txt">Stay Connected · Next Event Coming Soon</span>
-  <a href="https://eventfinder.healthmatters.clinic" class="sticky-reg-btn" target="_blank" rel="noopener">Register Free</a>
+  <a href="https://eventfinder.healthmatters.clinic" class="sticky-reg-btn" target="_blank" rel="noopener noreferrer">Register Free</a>
 </div>
 
 </body>
